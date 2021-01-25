@@ -3,6 +3,19 @@ using namespace std;
 
 typedef pair<int, string> is;
 
+// example for PQ with custom comparator
+struct CustomCompare {
+    bool operator()(const pair<int, pair<int,int> >& lhs, const pair<int, pair<int,int> >& rhs) {
+        return lhs.first > rhs.first;
+    }
+};
+
+void custom_comparator_pq() {
+    // definition
+    priority_queue<pair<int, pair<int,int> >,
+        vector<pair<int, pair<int,int> > >, CustomCompare > pq;
+}
+
 int main() {
   // suppose we enter these 7 money-name pairs below
   /*

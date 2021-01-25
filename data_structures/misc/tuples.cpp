@@ -9,7 +9,7 @@ int main() {
     tup2 = make_tuple(1, 2, 3);
 
     cout << get<0>(tup1) << endl; // 1
-    int &i = get<0>(tup1);
+    int &i = get<0>(tup1); // get can return reference
     i = 10;
     cout << get<0>(tup1) << endl; // 10
 
