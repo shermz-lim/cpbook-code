@@ -80,7 +80,7 @@ class max_flow {
             AL_EL_map[u*V + v] = EL.size() - 1;
             EL.emplace_back(u, directed ? 0 : w, 0);     // back edge
             AL[v].push_back(EL.size()-1);                // remember this index
-            AL_EL_map[v*V + v] = EL.size() - 1;
+            AL_EL_map[v*V + u] = EL.size() - 1;
         }
 
         edge get_edge(int u, int v) {
